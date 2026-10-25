@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pokédex</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-inner">
+      <h1>Pokédex</h1>
+      <p class="sub" id="count">Loading Pokémon…</p>
+      <input id="search" type="search" placeholder="Search by name or number" aria-label="Search Pokémon" autocomplete="off">
+      <div class="filters" id="filters" role="group" aria-label="Filter by type"></div>
+    </div>
+  </header>
+
+  <main>
+    <div class="grid" id="grid" aria-live="polite"></div>
+    <p class="empty" id="empty" hidden>No loaded Pokémon match. Press Enter to look up an exact name or number.</p>
+    <div class="more"><button id="more" type="button">Load more</button></div>
+  </main>
+
+  <dialog id="modal">
+    <button class="close" id="close" aria-label="Close details">&times;</button>
+    <div id="detail"></div>
+  </dialog>
+
+  <script src="script.js"></script>
+</body>
+</html>
